@@ -1,0 +1,21 @@
+
+name: Basic GitHub Actions Workflow
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  basic-job:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Print Welcome Message
+        run: echo "Hello! GitHub Actions workflow triggered successfully."
+
+      - name: Display Current Date
+        run: date
